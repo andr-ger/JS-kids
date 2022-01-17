@@ -1,0 +1,15 @@
+var scores = { };
+scores["Andrey"] = 0;
+scores["Mila"] = 1;
+scores["Jack"] = 3;
+3
+scores;
+{Andrey: 0, Mila: 1, Jack: 3}
+scores["Andrey"] +=3;
+3
+scores["Mila"] +=2;
+3
+scores["Jack"] +=0;
+3
+scores;
+{Andrey: 3, Mila: 3, Jack: 3}
