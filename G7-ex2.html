@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Java для детей. Виселица!</title>
+  </head>
+  <body>
+    <h2>Виселица!</h2>    
+    <script>
+	var words = [
+        "программа",
+        "последовательность",
+        "макака",
+        "носорог",
+        "чингачгук",
+        "новохудоносор",
+        "землеустройство",
+        "прекрасный",
+        "переоборудование",
+        "оладушек",
+        "разъяренный"
+    ];
+    var word = words[Math.floor(Math.random() * words.length)];
+    var answerArray = [];
+    for (var i = 0; i < word.lenght; i++) {
+      answerArray[i] = "_";
+    }
+    var remainingLetters = word.length;
+    while (remainingLetters > 0) {
+    alert(answerArray.join(" "));
+    var guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.");
+    if (guess === null) {
+      break;
+    } else if (guess.length !== 1) {
+      alert("Пожалуйста, введите только одну букву.");
+    } else {
+        guess = guess.toLowerCase();
+        for (var j = 0; j < word.length; j++) {
+        if (word[j] === guess) {
+          answerArray[j] = guess;
+          remainingLetters --;
+        }
+      }
+    }
+    }
+    alert(answerArray.join(" "));
+    alert("Отлично! Было загадано слово " + word);
+  	</script>
+    </body>
+</html>
