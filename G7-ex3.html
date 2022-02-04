@@ -22,13 +22,13 @@
     ];
     var word = words[Math.floor(Math.random() * words.length)];
     var answerArray = [];
-    for (var i = 0; i < word.lenght; i++) {
+    for (var i = 0; i < word.length; i++) {
       answerArray[i] = "_";
     }
     var remainingLetters = word.length;
     var attempts = 18;
     while (remainingLetters > 0 && attempts > 0) {
-    alert(answerArray.join(" "));
+    alert(answerArray.join( " "));
     var guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.");
     if (guess === null) {
       break;
