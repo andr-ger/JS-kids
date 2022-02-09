@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Java для детей. Изучаем DOM</title>
+  </head>
+  <body>
+    <h2 id="main-heading">Привет, мир!</h2>
+
+    <script>
+        var headingElement = document.getElementById("main-heading");
+        console.log(headingElement.innerHTML);
+        var newHeadingText = prompt("Введите новый заголовок:");
+        headingElement.innerHTML = newHeadingText;
+    </script>
+  </body>
+</html>
